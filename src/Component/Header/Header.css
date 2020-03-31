@@ -1,0 +1,11 @@
+
+.header img{
+    height: 50px; 
+}
+.header{
+    margin-top: 20px;
+}
+.header-right{
+text-align: right;
+margin-top: 20px;
+}

@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { createContext } from 'react';
 import './App.css';
+import Header from './Component/Header/Header';
+import Food from './Component/Food/Food';
+import About from './Component/About/About';
+import Footer from './Component/Footer/Footer';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
+import Login from './Component/Login/Login';
+import { AuthContextProvider } from './Component/Login/useAuth';
 
-function App() {
+export const UserContext = createContext();
+
+function App(props) {
+  const user = {name:' ', email:''}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthContextProvider>
+        <Header></Header>
+        <Login></Login>
+        <Food></Food>
+        <About></About>
+        <Footer></Footer>
+        </AuthContextProvider>
     </div>
   );
 }

@@ -1,0 +1,33 @@
+.footer{
+    background-color: black;
+    margin-top: 50px;
+}
+.top-footer{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.top-footer img{
+    width: 20%;
+}
+.bottom-footer{
+    display: flex;
+}
+.copyright{
+    margin-right: 500px;
+}
+.footer-part{
+    margin-right: 30px;
+}
+.footer-part ul li{
+    list-style-type: none;
+}
+.footer-part ul li a{
+    text-decoration: none;
+    color: white;
+}
+.privacy a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: white;
+}
